@@ -3,7 +3,7 @@ Test your intuition!
 Choose which road looks safer — our ML model reveals the real accident risk.
 
 ### Live App:
-👉 [Launch App on Streamlit](https://road-accident-risk-game-nmr8xzj2zvu5hnfipgdzke.streamlit.app/)
+👉 [Launch App on Streamlit](https://road-accident-risk-game-jkhd4npe94o2fxhpf6ow6m.streamlit.app/)
 
 ### Tech Stack:
 - Streamlit UI
