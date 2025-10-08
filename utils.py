@@ -3,15 +3,16 @@ import numpy as np
 import joblib
 import json
 import random
+import lightgbm as lgb
 import streamlit as st  # For caching
 
 # Load model stuff - cached for performance
 @st.cache_resource
 def load_model_stuff():
     try:
-        model = joblib.load('model.pkl')
-        scaler = joblib.load('scaler.pkl')
-        with open('feature_names.json', 'r') as f:
+        model = joblib.load('model-files/model.pkl')
+        scaler = joblib.load('model-files/scaler.pkl')
+        with open('model-files/feature_names.json', 'r') as f:
             feature_names = json.load(f)
         return model, scaler, feature_names
     except Exception as e:
@@ -84,4 +85,5 @@ def generate_road(seed=None):
         "school_season": np.random.choice([True, False]),
         "num_reported_accidents": np.random.poisson(lam=1.5)  # Like your generator
     }
+
     return road
